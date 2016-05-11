@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_category"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_followed"
+            android:icon="@drawable/nav_followed"
+            android:title="Followed" />
+        <!--<item
+            android:id="@+id/nav_top"
+            android:icon="@drawable/nav_most_reviewed"
+            android:title="Top Offers" />-->
+        <item
+            android:id="@+id/nav_post_offer"
+            android:icon="@drawable/nav_post"
+            android:title="Post an Offer" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Contact" />
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/nav_about"
+                android:title="About App" />
+        </menu>
+    </item>
+
+</menu>

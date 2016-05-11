@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         UIMenu movie1 = new UIMenu("SearchBar", "Default search bar", android.R.drawable.ic_menu_mylocation);
         menuList.add(movie1);
 
+        UIMenu movie2 = new UIMenu("Discount", "Discount BD Demo", android.R.drawable.ic_menu_mylocation);
+        menuList.add(movie2);
+
         mAdapter.notifyDataSetChanged();
     }
 }
