@@ -22,13 +22,12 @@
         <activity
             android:name=".Activity.NavigationUIActivity"
             android:label="@string/title_activity_navigation_ui"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-        android:name=".Activity.HomeActivity"
-        android:label="home"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".Activity.HomeActivity"
+            android:label="home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.OfferListActivity"
             android:label="offer_list"
@@ -36,8 +35,8 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.demo.uipractice.Activity.HomeActivity" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demo.uipractice.Activity.HomeActivity" />
         </activity>
         <activity
             android:name=".Activity.OfferDetailActivity"
@@ -46,10 +45,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.demo.uipractice.Activity.OfferListActivity" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demo.uipractice.Activity.OfferListActivity" />
         </activity>
-
+        <activity android:name=".Activity.CircularProgressBarActivity"></activity>
     </application>
 
 </manifest>

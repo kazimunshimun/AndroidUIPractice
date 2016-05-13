@@ -41,14 +41,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void prepareMenuData() {
-        UIMenu movie = new UIMenu("Navigation Drawer", "Default navigation drawer", android.R.drawable.ic_menu_manage);
-        menuList.add(movie);
+        UIMenu defaultNavigationDrawerMenu = new UIMenu("Navigation Drawer", "Default navigation drawer", android.R.drawable.ic_menu_manage);
+        menuList.add(defaultNavigationDrawerMenu);
 
         UIMenu movie1 = new UIMenu("SearchBar", "Default search bar", android.R.drawable.ic_menu_mylocation);
         menuList.add(movie1);
 
-        UIMenu movie2 = new UIMenu("Discount", "Discount BD Demo", android.R.drawable.ic_menu_mylocation);
-        menuList.add(movie2);
+        UIMenu discountBDMenu = new UIMenu("Discount", "Discount BD Demo", android.R.drawable.ic_menu_mylocation);
+        menuList.add(discountBDMenu);
+
+        UIMenu circularProgressBarMenu = new UIMenu("Progress Bar", "Circular Progress bar on top of android CardView", android.R.drawable.ic_menu_manage);
+        menuList.add(circularProgressBarMenu);
 
         mAdapter.notifyDataSetChanged();
     }
