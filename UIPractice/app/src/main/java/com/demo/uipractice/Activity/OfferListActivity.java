@@ -1,15 +1,22 @@
 package com.demo.uipractice.Activity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.demo.uipractice.Adapters.OfferListAdapter;
 import com.demo.uipractice.R;
+import com.demo.uipractice.Services.Utils;
 
 
 public class OfferListActivity extends AppCompatActivity {
@@ -19,27 +26,67 @@ public class OfferListActivity extends AppCompatActivity {
     OfferListAdapter mAdapter;
     ImageView mCategoryImageView;
 
+    Toolbar toolbar;
+
+    RelativeLayout contentRoot;
+
+    private int drawingStartLocation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer_list);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        contentRoot = (RelativeLayout) findViewById(R.id.contentRoot);
+
+
         Intent offerListIntent = getIntent();
-        int postion = offerListIntent.getIntExtra("postion", 0);
+        int position = offerListIntent.getIntExtra("postion", 0);
+        drawingStartLocation = offerListIntent.getIntExtra("ARG_DRAWING_START_LOCATION", 0);
 
         mCategoryImageView = (ImageView) findViewById(R.id.categoryImageView);
-        setCategoryImage(postion);
+        setCategoryImage(position);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.offerListRecyclerView);
         mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         mStaggeredGridLayoutManager.setSpanCount(1);
         mRecyclerView.setLayoutManager(mStaggeredGridLayoutManager);
-        mAdapter = new OfferListAdapter(this, postion);
+        mAdapter = new OfferListAdapter(this, position);
         mRecyclerView.setAdapter(mAdapter);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        startIntroAnimation();
+    }
+
+    private void startIntroAnimation() {
+     //   ViewCompat.setElevation(toolbar, 0);
+        contentRoot.setScaleY(0.1f);
+        contentRoot.setPivotY(drawingStartLocation);
+     //   llAddComment.setTranslationY(200);
+
+        contentRoot.animate()
+                .scaleY(1)
+                .setDuration(200)
+                .setInterpolator(new AccelerateInterpolator())
+                .setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        ViewCompat.setElevation(toolbar, Utils.dpToPx(8));
+                        animateContent();
+                    }
+                })
+                .start();
+    }
+
+    private void animateContent() {
+    //    commentsAdapter.updateItems();
+   //     llAddComment.animate().translationY(0)
+    //            .setInterpolator(new DecelerateInterpolator())
+    //            .setDuration(200)
+    //            .start();
     }
 
     void setCategoryImage(int position){
@@ -64,7 +111,7 @@ public class OfferListActivity extends AppCompatActivity {
                 imageResource = R.drawable.cat_computers;
                 break;
             case 6:
-                imageResource = R.drawable.cat_electronics;
+                imageResource = R.drawable.cat_appliances;
                 break;
             case 7:
                 imageResource = R.drawable.cat_groceries;

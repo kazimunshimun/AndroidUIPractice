@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.demo.uipractice.Activity.CircularProgressBarActivity;
+import com.demo.uipractice.Activity.HomeActivity;
 import com.demo.uipractice.Activity.NavigationUIActivity;
 import com.demo.uipractice.Models.UIMenu;
 import com.demo.uipractice.R;
@@ -69,8 +70,9 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
                         Intent navigationIntent = new Intent(mContext, NavigationUIActivity.class);
                         mContext.startActivity(navigationIntent);
                         break;
-                    case 1:
-
+                    case 2:
+                        Intent discountIntent = new Intent(mContext, HomeActivity.class);
+                        mContext.startActivity(discountIntent);
                         break;
                     case 3:
                         Intent circularProgressBarIntent = new Intent(mContext, CircularProgressBarActivity.class);

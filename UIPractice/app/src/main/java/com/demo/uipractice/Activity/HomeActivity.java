@@ -1,5 +1,7 @@
 package com.demo.uipractice.Activity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -21,6 +23,7 @@ import com.demo.uipractice.Fragments.FollowedFragment;
 import com.demo.uipractice.Fragments.PostOfferFragment;
 import com.demo.uipractice.Fragments.TabFragment;
 import com.demo.uipractice.R;
+import com.demo.uipractice.Services.Utils;
 
 
 public class HomeActivity extends AppCompatActivity
@@ -30,6 +33,10 @@ public class HomeActivity extends AppCompatActivity
     FrameLayout frameLayout;
     NavigationView navigationView;
     DrawerLayout drawer;
+
+    Toolbar toolbar;
+
+    private static final int ANIM_DURATION_TOOLBAR = 300;
 
 
     @Override
@@ -45,7 +52,7 @@ public class HomeActivity extends AppCompatActivity
     }
 
     void setUpView(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -76,7 +83,18 @@ public class HomeActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
+        startIntroAnimation();
         return true;
+    }
+
+    private void startIntroAnimation() {
+
+        int actionbarSize = Utils.dpToPx(56);
+        toolbar.setTranslationY(-actionbarSize);
+        toolbar.animate()
+                .translationY(0)
+                .setDuration(ANIM_DURATION_TOOLBAR)
+                .setStartDelay(300);
     }
 
     @Override

@@ -86,6 +86,8 @@ public class CategoryFragment extends Fragment {
         mAdapter = new CategoryAdapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
+      //  mRecyclerView.setItemAnimator();
+
      //   locationSpinner = (Spinner) containerView.findViewById(R.id.locationSpinner);
 
         ArrayAdapter<String> gameKindArray= new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, test);

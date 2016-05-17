@@ -13,7 +13,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.Interpolator;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -35,6 +38,11 @@ public class OfferDetailActivity extends AppCompatActivity{
  //   private ContextMenuDialogFragment mMenuDialogFragment;
     TextView bandNameTextView, offerTextTextView;
 
+    ScrollView mDetailScrollView;
+    ImageView mOfferImageView;
+
+    private static final Interpolator INTERPOLATOR = new DecelerateInterpolator();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +50,9 @@ public class OfferDetailActivity extends AppCompatActivity{
 
         bandNameTextView = (TextView) findViewById(R.id.bandNameTextView);
         offerTextTextView = (TextView) findViewById(R.id.offerTextTextView);
+
+        mOfferImageView = (ImageView) findViewById(R.id.imageView);
+        mDetailScrollView = (ScrollView) findViewById(R.id.scrollView);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -64,6 +75,8 @@ public class OfferDetailActivity extends AppCompatActivity{
 
         fragmentManager = getSupportFragmentManager();
         initToolbar();
+
+        animateUserProfileHeader();
     //    initMenuFragment();
       //  addFragment(new MainFragment(), true, R.id.container);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -224,11 +237,19 @@ public class OfferDetailActivity extends AppCompatActivity{
         int imageResource = getResources().getIdentifier(uri, null, getPackageName());
 
         if (imageResource != 0){
-            ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
             Drawable image = getResources().getDrawable(imageResource);
-            imageView.setImageDrawable(image);
+            mOfferImageView.setImageDrawable(image);
         }
 
+    }
+
+    private void animateUserProfileHeader() {
+        mOfferImageView.setTranslationY(-mOfferImageView.getHeight());
+        mDetailScrollView.setAlpha(0);
+
+        mOfferImageView.animate().translationY(0).setDuration(300).setInterpolator(INTERPOLATOR);
+        mDetailScrollView.animate().alpha(1).setDuration(200).setStartDelay(400).setInterpolator(INTERPOLATOR).start();
     }
 
 }

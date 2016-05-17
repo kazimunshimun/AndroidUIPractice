@@ -38,6 +38,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
                 Intent offerListIntent = new Intent(mContext, OfferListActivity.class);
                 offerListIntent.putExtra("postion", position);
 
+                int[] startingLocation = new int[2];
+                v.getLocationOnScreen(startingLocation);
+                offerListIntent.putExtra("ARG_DRAWING_START_LOCATION", startingLocation[1]);
+
               //  ImageView categoryImageView = (ImageView) v.findViewById(R.id.categoryImageView);
               //  Pair<View, String> imagePair = Pair.create((View) categoryImageView, "Hello");
 
