@@ -152,7 +152,8 @@
                             android:background="#00ffffff"
                             android:padding="8dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/like" />
+                            android:src="@drawable/like"
+                            android:id="@+id/likeButton" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -168,7 +169,8 @@
                             android:background="#00ffffff"
                             android:padding="8dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/nav_followed" />
+                            android:src="@drawable/nav_followed"
+                            android:id="@+id/ratingButton" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -184,7 +186,8 @@
                             android:background="#00ffffff"
                             android:padding="8dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_heart_red" />
+                            android:src="@drawable/heart"
+                            android:id="@+id/followButton" />
                     </LinearLayout>
                 </LinearLayout>
 

@@ -13,9 +13,9 @@ public class UIPracticeApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        FontsOverride.setDefaultFont(this, "DEFAULT", "roboto_thin.ttf");
-        FontsOverride.setDefaultFont(this, "MONOSPACE", "roboto_thin.ttf");
-        FontsOverride.setDefaultFont(this, "SERIF", "roboto_thin.ttf");
-        FontsOverride.setDefaultFont(this, "SANS_SERIF", "roboto_thin.ttf");
+        FontsOverride.setDefaultFont(this, "DEFAULT", "roboto_regular.ttf");
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "roboto_regular.ttf");
+        FontsOverride.setDefaultFont(this, "SERIF", "roboto_regular.ttf");
+        FontsOverride.setDefaultFont(this, "SANS_SERIF", "roboto_regular.ttf");
     }
 }
