@@ -1,5 +1,7 @@
 package com.demo.uipractice.Activity;
 
+import android.animation.TypeEvaluator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -41,6 +44,11 @@ public class OfferDetailActivity extends AppCompatActivity{
     ScrollView mDetailScrollView;
     ImageView mOfferImageView;
 
+    ImageButton mLikeButton, mRateButton, mFollowButton;
+    TextView mLikeCountTextView, mRateCountTextView, mFollowCountTextView;
+
+    int likeCount = 187, followCount = 33;
+
     private static final Interpolator INTERPOLATOR = new DecelerateInterpolator();
 
     @Override
@@ -53,6 +61,17 @@ public class OfferDetailActivity extends AppCompatActivity{
 
         mOfferImageView = (ImageView) findViewById(R.id.imageView);
         mDetailScrollView = (ScrollView) findViewById(R.id.scrollView);
+
+        mLikeButton = (ImageButton) findViewById(R.id.likeButton);
+        mRateButton = (ImageButton) findViewById(R.id.ratingButton);
+        mFollowButton = (ImageButton) findViewById(R.id.followButton);
+
+        mLikeCountTextView = (TextView) findViewById(R.id.likeCountTextView);
+        mRateCountTextView = (TextView) findViewById(R.id.ratingTextView);
+        mFollowCountTextView = (TextView) findViewById(R.id.followCountTextView);
+
+        mLikeCountTextView.setText(""+likeCount);
+        mFollowCountTextView.setText(""+followCount);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -81,8 +100,51 @@ public class OfferDetailActivity extends AppCompatActivity{
       //  addFragment(new MainFragment(), true, R.id.container);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        mLikeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mLikeButton.setImageResource(R.drawable.liked);
+                incrementCounter(mLikeCountTextView, likeCount);
+            }
+        });
+
+        mRateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRateButton.setImageResource(R.drawable.nav_followed_done);
+
+            }
+        });
+
+        mFollowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mFollowButton.setImageResource(R.drawable.ic_heart_red);
+                incrementCounter(mFollowCountTextView, followCount);
+            }
+        });
+
      //   serverCall();
     }
+
+    void incrementCounter(final TextView view, int count){
+        ValueAnimator animator = new ValueAnimator();
+        animator.setObjectValues(count, count+1);
+
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            public void onAnimationUpdate(ValueAnimator animation) {
+                view.setText(String.valueOf(animation.getAnimatedValue()));
+            }
+        });
+        animator.setEvaluator(new TypeEvaluator<Integer>() {
+            public Integer evaluate(float fraction, Integer startValue, Integer endValue) {
+                return Math.round(startValue + (endValue - startValue) * fraction);
+            }
+        });
+        animator.setDuration(1000);
+        animator.start();
+    }
+
 
     void serverCall(){
         RequestQueue queue = Volley.newRequestQueue(this);
