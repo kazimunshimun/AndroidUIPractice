@@ -3,13 +3,13 @@
     package="com.demo.uipractice">
 
     <application
+        android:name=".UIPracticeApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".UIPracticeApplication">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".Activity.MainActivity"
             android:label="@string/app_name"
@@ -23,7 +23,7 @@
         <activity
             android:name=".Activity.NavigationUIActivity"
             android:label="@string/title_activity_navigation_ui"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.HomeActivity"
             android:label="home"
@@ -49,7 +49,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.demo.uipractice.Activity.OfferListActivity" />
         </activity>
-        <activity android:name=".Activity.CircularProgressBarActivity"></activity>
+        <activity android:name=".Activity.CircularProgressBarActivity" />
+        <activity android:name=".Activity.OfferDetailOptionsActivity" />
+        <activity
+            android:name=".Activity.OfferDetail1Activity"
+            android:label=""
+            android:parentActivityName=".Activity.OfferDetailOptionsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demo.uipractice.Activity.OfferDetailOptionsActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.OfferDetailOption2Activity"
+            android:label="@string/title_activity_offer_detail_option2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

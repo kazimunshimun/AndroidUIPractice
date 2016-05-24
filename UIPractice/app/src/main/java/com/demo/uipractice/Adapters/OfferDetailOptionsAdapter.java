@@ -11,18 +11,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.demo.uipractice.Activity.CircularProgressBarActivity;
-import com.demo.uipractice.Activity.HomeActivity;
-import com.demo.uipractice.Activity.NavigationUIActivity;
-import com.demo.uipractice.Activity.OfferDetailOptionsActivity;
+import com.demo.uipractice.Activity.OfferDetail1Activity;
+import com.demo.uipractice.Activity.OfferDetailOption2Activity;
 import com.demo.uipractice.Models.UIMenu;
 import com.demo.uipractice.R;
 
 import java.util.List;
 
 /**
- * Created by TigerIT on 5/2/16.
+ * Created by Anik TigerIT on 5/24/16.
  */
-public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHolder> {
+public class OfferDetailOptionsAdapter extends RecyclerView.Adapter<OfferDetailOptionsAdapter.MenuViewHolder> {
 
     private List<UIMenu> uiMenuList;
     private Context mContext;
@@ -52,7 +51,7 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
     }
 
 
-    public UIMenuAdapter(List<UIMenu> menuList, Context context) {
+    public OfferDetailOptionsAdapter(List<UIMenu> menuList, Context context) {
         this.uiMenuList = menuList;
         mContext = context;
     }
@@ -68,20 +67,19 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
                 Log.d("clicked", "recycle view. position:"+position);
                 switch (position){
                     case 0:
-                        Intent navigationIntent = new Intent(mContext, NavigationUIActivity.class);
-                        mContext.startActivity(navigationIntent);
+                        Intent offerDetail1Intent = new Intent(mContext, OfferDetail1Activity.class);
+                        mContext.startActivity(offerDetail1Intent);
+                        break;
+                    case 1:
+                        Intent option2Intent = new Intent(mContext, OfferDetailOption2Activity.class);
+                        mContext.startActivity(option2Intent);
                         break;
                     case 2:
-                        Intent discountIntent = new Intent(mContext, HomeActivity.class);
-                        mContext.startActivity(discountIntent);
-                        break;
-                    case 3:
                         Intent circularProgressBarIntent = new Intent(mContext, CircularProgressBarActivity.class);
                         mContext.startActivity(circularProgressBarIntent);
                         break;
-                    case 4:
-                        Intent offerDetailOptionsIntent = new Intent(mContext, OfferDetailOptionsActivity.class);
-                        mContext.startActivity(offerDetailOptionsIntent);
+                    case 3:
+
                         break;
                     default:
                         break;

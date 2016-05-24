@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         UIMenu circularProgressBarMenu = new UIMenu("Progress Bar", "Circular Progress bar on top of android CardView", android.R.drawable.ic_menu_manage);
         menuList.add(circularProgressBarMenu);
 
+        UIMenu offerDetailMenu1 = new UIMenu("Offer Detail", "Offer detail options", android.R.drawable.ic_menu_agenda);
+        menuList.add(offerDetailMenu1);
+
         mAdapter.notifyDataSetChanged();
     }
 }
