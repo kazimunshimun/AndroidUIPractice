@@ -48,6 +48,15 @@ public class OfferDetailOptionsActivity extends AppCompatActivity {
         UIMenu offerDetailMenu3 = new UIMenu("Offer Detail", "Offer detail menu 3", android.R.drawable.ic_menu_agenda);
         menuList.add(offerDetailMenu3);
 
+        UIMenu offerDetailMenu4 = new UIMenu("Offer Detail", "Offer detail menu 4", android.R.drawable.ic_menu_agenda);
+        menuList.add(offerDetailMenu4);
+
+        UIMenu offerDetailMenu5 = new UIMenu("Offer Detail", "Offer detail menu 5", android.R.drawable.ic_menu_agenda);
+        menuList.add(offerDetailMenu5);
+
+        UIMenu offerDetailMenu6 = new UIMenu("Offer Detail", "Offer detail menu 6", android.R.drawable.ic_menu_agenda);
+        menuList.add(offerDetailMenu6);
+
         mAdapter.notifyDataSetChanged();
     }
 }

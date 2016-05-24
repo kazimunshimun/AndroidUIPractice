@@ -63,7 +63,11 @@
         <activity
             android:name=".Activity.OfferDetailOption2Activity"
             android:label="@string/title_activity_offer_detail_option2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.OfferDetailOption3Activity" />
+        <activity android:name=".Activity.OfferDetailOption4Activity" />
+        <activity android:name=".Activity.OfferDetailOption5Activity" />
+        <activity android:name=".Activity.OfferDetailOption6Activity"></activity>
     </application>
 
 </manifest>

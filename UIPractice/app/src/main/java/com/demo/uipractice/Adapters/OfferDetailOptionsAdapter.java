@@ -10,9 +10,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.demo.uipractice.Activity.CircularProgressBarActivity;
 import com.demo.uipractice.Activity.OfferDetail1Activity;
 import com.demo.uipractice.Activity.OfferDetailOption2Activity;
+import com.demo.uipractice.Activity.OfferDetailOption3Activity;
+import com.demo.uipractice.Activity.OfferDetailOption4Activity;
+import com.demo.uipractice.Activity.OfferDetailOption5Activity;
+import com.demo.uipractice.Activity.OfferDetailOption6Activity;
 import com.demo.uipractice.Models.UIMenu;
 import com.demo.uipractice.R;
 
@@ -75,11 +78,21 @@ public class OfferDetailOptionsAdapter extends RecyclerView.Adapter<OfferDetailO
                         mContext.startActivity(option2Intent);
                         break;
                     case 2:
-                        Intent circularProgressBarIntent = new Intent(mContext, CircularProgressBarActivity.class);
-                        mContext.startActivity(circularProgressBarIntent);
+                        Intent option3Intent = new Intent(mContext, OfferDetailOption3Activity.class);
+                        mContext.startActivity(option3Intent);
                         break;
                     case 3:
+                        Intent option4Intent = new Intent(mContext, OfferDetailOption4Activity.class);
+                        mContext.startActivity(option4Intent);
+                        break;
 
+                    case 5:
+                        Intent option5Intent = new Intent(mContext, OfferDetailOption5Activity.class);
+                        mContext.startActivity(option5Intent);
+                        break;
+                    case 6:
+                        Intent option6Intent = new Intent(mContext, OfferDetailOption6Activity.class);
+                        mContext.startActivity(option6Intent);
                         break;
                     default:
                         break;
