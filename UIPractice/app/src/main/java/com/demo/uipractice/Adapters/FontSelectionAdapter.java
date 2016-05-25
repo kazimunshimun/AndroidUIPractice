@@ -10,20 +10,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.demo.uipractice.Activity.CircularProgressBarActivity;
-import com.demo.uipractice.Activity.FontSelectionOptionsActivity;
-import com.demo.uipractice.Activity.HomeActivity;
-import com.demo.uipractice.Activity.NavigationUIActivity;
-import com.demo.uipractice.Activity.OfferDetailOptionsActivity;
+import com.demo.uipractice.Activity.SelectedOfferDetailActivity;
 import com.demo.uipractice.Models.UIMenu;
 import com.demo.uipractice.R;
 
 import java.util.List;
 
 /**
- * Created by TigerIT on 5/2/16.
+ * Created by Anik TigerIT on 5/25/16.
  */
-public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHolder> {
+public class FontSelectionAdapter extends RecyclerView.Adapter<FontSelectionAdapter.MenuViewHolder> {
 
     private List<UIMenu> uiMenuList;
     private Context mContext;
@@ -53,7 +49,7 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
     }
 
 
-    public UIMenuAdapter(List<UIMenu> menuList, Context context) {
+    public FontSelectionAdapter(List<UIMenu> menuList, Context context) {
         this.uiMenuList = menuList;
         mContext = context;
     }
@@ -67,30 +63,9 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
             @Override
             public void onRecycleViewClick(View caller, int position) {
                 Log.d("clicked", "recycle view. position:"+position);
-                switch (position){
-                    case 0:
-                        Intent navigationIntent = new Intent(mContext, NavigationUIActivity.class);
-                        mContext.startActivity(navigationIntent);
-                        break;
-                    case 2:
-                        Intent discountIntent = new Intent(mContext, HomeActivity.class);
-                        mContext.startActivity(discountIntent);
-                        break;
-                    case 3:
-                        Intent circularProgressBarIntent = new Intent(mContext, CircularProgressBarActivity.class);
-                        mContext.startActivity(circularProgressBarIntent);
-                        break;
-                    case 4:
-                        Intent offerDetailOptionsIntent = new Intent(mContext, OfferDetailOptionsActivity.class);
-                        mContext.startActivity(offerDetailOptionsIntent);
-                        break;
-                    case 5:
-                        Intent fontSelectionOptionsIntent = new Intent(mContext, FontSelectionOptionsActivity.class);
-                        mContext.startActivity(fontSelectionOptionsIntent);
-                        break;
-                    default:
-                        break;
-                }
+                Intent offerDetail1Intent = new Intent(mContext, SelectedOfferDetailActivity.class);
+                offerDetail1Intent.putExtra("selectedFont", position)
+;                mContext.startActivity(offerDetail1Intent);
             }
         });
     }

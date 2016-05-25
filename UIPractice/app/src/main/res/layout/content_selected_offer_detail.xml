@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.demo.uipractice.Activity.SelectedOfferDetailActivity"
+    tools:showIn="@layout/activity_selected_offer_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_like_rate_follow3"/>
+
+        <include layout="@layout/view_offer_detail_info2"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

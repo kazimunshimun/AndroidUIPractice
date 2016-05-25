@@ -96,4 +96,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_offer_detail_option2">OfferDetailOption2Activity</string>
+    <string name="title_activity_selected_offer_detail"></string>
 </resources>

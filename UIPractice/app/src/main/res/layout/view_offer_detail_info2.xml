@@ -13,8 +13,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text=""
-            android:textSize="18dp" />
+            android:text="30% off on all useless product that we could not sell"
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:padding="8dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -30,7 +32,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/bandTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -64,7 +66,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/categoryTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -90,7 +92,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/expireTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -101,11 +103,11 @@
                     android:padding="4dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/expireDateTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="27/2/2016"
+                    android:text="27 May, 2016"
                     android:textSize="18dp" />
             </LinearLayout>
         </LinearLayout>
@@ -123,7 +125,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/contactTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -134,7 +136,7 @@
                     android:padding="4dp" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/contactValueTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -149,7 +151,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/websiteTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -160,7 +162,7 @@
                     android:padding="4dp" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/websiteNameTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -182,7 +184,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/availableTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -193,7 +195,7 @@
                     android:padding="4dp" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/brancesTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"

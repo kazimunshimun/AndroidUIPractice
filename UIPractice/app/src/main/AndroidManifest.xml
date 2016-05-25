@@ -67,7 +67,17 @@
         <activity android:name=".Activity.OfferDetailOption3Activity" />
         <activity android:name=".Activity.OfferDetailOption4Activity" />
         <activity android:name=".Activity.OfferDetailOption5Activity" />
-        <activity android:name=".Activity.OfferDetailOption6Activity"></activity>
+        <activity android:name=".Activity.OfferDetailOption6Activity" />
+        <activity android:name=".Activity.FontSelectionOptionsActivity" />
+        <activity
+            android:name=".Activity.SelectedOfferDetailActivity"
+            android:label="@string/title_activity_selected_offer_detail"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Activity.FontSelectionOptionsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demo.uipractice.Activity.FontSelectionOptionsActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         UIMenu offerDetailMenu1 = new UIMenu("Offer Detail", "Offer detail options", android.R.drawable.ic_menu_agenda);
         menuList.add(offerDetailMenu1);
 
+        UIMenu fontSelectionMenu = new UIMenu("Font Selection", "Font selection options", android.R.drawable.ic_menu_info_details);
+        menuList.add(fontSelectionMenu);
+
         mAdapter.notifyDataSetChanged();
     }
 }

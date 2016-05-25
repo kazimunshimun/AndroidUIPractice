@@ -50,7 +50,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Band"
-            android:id="@+id/textView" />
+            android:id="@+id/bandTextView" />
 
         <TextView
             android:layout_width="wrap_content"
