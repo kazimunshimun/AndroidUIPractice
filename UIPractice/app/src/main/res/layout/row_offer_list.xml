@@ -19,7 +19,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="4dp"
-            android:src="@drawable/nav_followed" />
+            android:src="@drawable/nav_followed"
+            android:layout_weight="0" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +29,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="4dp"
-            android:layout_marginBottom="2dp">
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1">
 
             <TextView
                 android:id="@+id/companyNameTextView"
@@ -53,6 +55,64 @@
                 android:text="New Text"
                 android:textSize="12dp"
                 android:textColor="#8f8f8f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Featured"
+                android:id="@+id/featuredTextView"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/orange"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="4dp">
+
+                <ImageButton
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="#00ffffff"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/view"
+                    android:id="@+id/likeButton" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1167"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:id="@+id/likeCountTextView" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Views"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:id="@+id/likeTextView" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

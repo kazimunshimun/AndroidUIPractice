@@ -94,6 +94,9 @@ public class FontSelectionOptionsActivity extends AppCompatActivity {
         UIMenu offerDetailMenu19 = new UIMenu("Roboto regular", "Roboto regular on Offer detail", android.R.drawable.ic_menu_compass);
         menuList.add(offerDetailMenu19);
 
+        UIMenu offerDetailMenu20 = new UIMenu("Trebuchet MS", "Trebuchet MS on Offer detail", android.R.drawable.ic_menu_compass);
+        menuList.add(offerDetailMenu20);
+
         mAdapter.notifyDataSetChanged();
     }
 }

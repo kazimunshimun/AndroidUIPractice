@@ -52,6 +52,8 @@ public class FeaturedOfferAdapter  extends RecyclerView.Adapter<FeaturedOfferAda
         holder.offerEndDateTextView.setText(offer.endDate);
         holder.companyLogoImageView.setImageResource(offer.logoImageResource);
 
+        holder.featuredTextView.setVisibility(View.VISIBLE);
+
     }
 
     @Override
@@ -66,6 +68,7 @@ public class FeaturedOfferAdapter  extends RecyclerView.Adapter<FeaturedOfferAda
         TextView offerDiscountTextView;
         TextView offerEndDateTextView;
         LinearLayout offerCompanyLayout;
+        TextView featuredTextView;
 
         public CategoryItemClick mListener;
 
@@ -77,6 +80,7 @@ public class FeaturedOfferAdapter  extends RecyclerView.Adapter<FeaturedOfferAda
             offerDiscountTextView = (TextView) itemView.findViewById(R.id.percentageOffTextView);
             offerEndDateTextView = (TextView) itemView.findViewById(R.id.endDateTextView);
             offerCompanyLayout = (LinearLayout) itemView.findViewById(R.id.offerCompanyLayout);
+            featuredTextView = (TextView) itemView.findViewById(R.id.featuredTextView);
             offerCompanyLayout.setOnClickListener(this);
         }
 

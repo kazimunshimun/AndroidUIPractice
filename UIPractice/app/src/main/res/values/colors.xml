@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimary">#5be4f1</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
@@ -14,7 +14,7 @@
     <!-- basic colors -->
     <color name="green">#27D34D</color>
     <color name="blue">#2A91BD</color>
-    <color name="orange">#FF9D2F</color>
+    <color name="orange">#ff9d2f</color>
     <color name="red">#FF432F</color>
     
     <color name="preset_button_background">@android:color/transparent</color>

@@ -144,6 +144,10 @@ public class SelectedOfferDetailActivity extends AppCompatActivity {
                 fontAssetName = "roboto_regular.ttf";
                 break;
 
+            case 18:
+                fontAssetName = "trebuchet_ms.ttf";
+                break;
+
             default:
                 fontAssetName = "roboto_regular.ttf";
                 break;

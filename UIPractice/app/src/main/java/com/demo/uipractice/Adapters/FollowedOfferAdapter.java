@@ -53,6 +53,10 @@ public class FollowedOfferAdapter  extends RecyclerView.Adapter<FollowedOfferAda
         holder.offerEndDateTextView.setText(offer.endDate);
         holder.companyLogoImageView.setImageResource(offer.logoImageResource);
 
+        if (position == 2 || position == 5){
+            holder.featuredTextView.setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override
@@ -67,6 +71,7 @@ public class FollowedOfferAdapter  extends RecyclerView.Adapter<FollowedOfferAda
         TextView offerDiscountTextView;
         TextView offerEndDateTextView;
         LinearLayout offerCompanyLayout;
+        TextView featuredTextView;
 
         public CategoryItemClick mListener;
 
@@ -78,6 +83,7 @@ public class FollowedOfferAdapter  extends RecyclerView.Adapter<FollowedOfferAda
             offerDiscountTextView = (TextView) itemView.findViewById(R.id.percentageOffTextView);
             offerEndDateTextView = (TextView) itemView.findViewById(R.id.endDateTextView);
             offerCompanyLayout = (LinearLayout) itemView.findViewById(R.id.offerCompanyLayout);
+            featuredTextView = (TextView) itemView.findViewById(R.id.featuredTextView);
             offerCompanyLayout.setOnClickListener(this);
         }
 
