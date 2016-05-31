@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
         UIMenu fontSelectionMenu = new UIMenu("Font Selection", "Font selection options", android.R.drawable.ic_menu_info_details);
         menuList.add(fontSelectionMenu);
 
+        UIMenu glassViewMenu = new UIMenu("Glass View", "Glass view test", android.R.drawable.ic_menu_info_details);
+        menuList.add(glassViewMenu);
+
+        UIMenu blurViewMenu = new UIMenu("Blur View", "Blur view test", android.R.drawable.ic_menu_info_details);
+        menuList.add(blurViewMenu);
+
         mAdapter.notifyDataSetChanged();
     }
 }

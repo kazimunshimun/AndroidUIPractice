@@ -10,8 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.demo.uipractice.Activity.BlurActivity;
 import com.demo.uipractice.Activity.CircularProgressBarActivity;
 import com.demo.uipractice.Activity.FontSelectionOptionsActivity;
+import com.demo.uipractice.Activity.GlassActivity;
 import com.demo.uipractice.Activity.HomeActivity;
 import com.demo.uipractice.Activity.NavigationUIActivity;
 import com.demo.uipractice.Activity.OfferDetailOptionsActivity;
@@ -87,6 +89,14 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
                     case 5:
                         Intent fontSelectionOptionsIntent = new Intent(mContext, FontSelectionOptionsActivity.class);
                         mContext.startActivity(fontSelectionOptionsIntent);
+                        break;
+                    case 6:
+                        Intent glassViewIntent = new Intent(mContext, GlassActivity.class);
+                        mContext.startActivity(glassViewIntent);
+                        break;
+                    case 7:
+                        Intent blurViewIntent = new Intent(mContext, BlurActivity.class);
+                        mContext.startActivity(blurViewIntent);
                         break;
                     default:
                         break;
