@@ -85,6 +85,11 @@
         <activity
             android:name=".Activity.BlurActivity"
             android:label="@string/title_activity_blur"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.GlassEffectSelectionActivity" />
+        <activity
+            android:name=".Activity.BlurEffectActivity"
+            android:label="@string/title_activity_blur_effect"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.demo.uipractice.Activity.SelectedOfferDetailActivity"
-    tools:showIn="@layout/activity_selected_offer_detail">
+    tools:showIn="@layout/activity_selected_offer_detail"
+    android:background="@drawable/gradient_1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#7cd1d1d1">
 
         <include layout="@layout/view_like_rate_follow3"/>
 

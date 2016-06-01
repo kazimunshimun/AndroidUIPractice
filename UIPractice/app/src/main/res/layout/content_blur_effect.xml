@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.demo.uipractice.Activity.BlurEffectActivity"
+    tools:showIn="@layout/activity_blur_effect">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.demo.uipractice.Views.TopCenterImageView
+            android:id="@+id/normal_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gradient_1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Background blur"
+                android:background="#7cd1d1d1"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

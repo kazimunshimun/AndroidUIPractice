@@ -10,21 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.demo.uipractice.Activity.CircularProgressBarActivity;
-import com.demo.uipractice.Activity.FontSelectionOptionsActivity;
-import com.demo.uipractice.Activity.GlassEffectSelectionActivity;
-import com.demo.uipractice.Activity.HomeActivity;
-import com.demo.uipractice.Activity.NavigationUIActivity;
-import com.demo.uipractice.Activity.OfferDetailOptionsActivity;
+import com.demo.uipractice.Activity.BlurActivity;
+import com.demo.uipractice.Activity.BlurEffectActivity;
+import com.demo.uipractice.Activity.GlassActivity;
 import com.demo.uipractice.Models.UIMenu;
 import com.demo.uipractice.R;
 
 import java.util.List;
 
 /**
- * Created by TigerIT on 5/2/16.
+ * Created by Anik TigerIT on 6/1/16.
  */
-public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHolder> {
+public class GlassEffectAdapter  extends RecyclerView.Adapter<GlassEffectAdapter.MenuViewHolder> {
 
     private List<UIMenu> uiMenuList;
     private Context mContext;
@@ -54,7 +51,7 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
     }
 
 
-    public UIMenuAdapter(List<UIMenu> menuList, Context context) {
+    public GlassEffectAdapter(List<UIMenu> menuList, Context context) {
         this.uiMenuList = menuList;
         mContext = context;
     }
@@ -70,28 +67,16 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
                 Log.d("clicked", "recycle view. position:"+position);
                 switch (position){
                     case 0:
-                        Intent navigationIntent = new Intent(mContext, NavigationUIActivity.class);
-                        mContext.startActivity(navigationIntent);
+                        Intent glassViewIntent = new Intent(mContext, GlassActivity.class);
+                        mContext.startActivity(glassViewIntent);
+                        break;
+                    case 1:
+                        Intent blurViewIntent = new Intent(mContext, BlurActivity.class);
+                        mContext.startActivity(blurViewIntent);
                         break;
                     case 2:
-                        Intent discountIntent = new Intent(mContext, HomeActivity.class);
-                        mContext.startActivity(discountIntent);
-                        break;
-                    case 3:
-                        Intent circularProgressBarIntent = new Intent(mContext, CircularProgressBarActivity.class);
-                        mContext.startActivity(circularProgressBarIntent);
-                        break;
-                    case 4:
-                        Intent offerDetailOptionsIntent = new Intent(mContext, OfferDetailOptionsActivity.class);
-                        mContext.startActivity(offerDetailOptionsIntent);
-                        break;
-                    case 5:
-                        Intent fontSelectionOptionsIntent = new Intent(mContext, FontSelectionOptionsActivity.class);
-                        mContext.startActivity(fontSelectionOptionsIntent);
-                        break;
-                    case 6:
-                        Intent glassViewIntent = new Intent(mContext, GlassEffectSelectionActivity.class);
-                        mContext.startActivity(glassViewIntent);
+                        Intent blurEffectIntent = new Intent(mContext, BlurEffectActivity.class);
+                        mContext.startActivity(blurEffectIntent);
                         break;
                     default:
                         break;
