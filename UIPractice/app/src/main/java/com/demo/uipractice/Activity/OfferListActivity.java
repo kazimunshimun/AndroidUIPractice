@@ -10,8 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.demo.uipractice.Adapters.OfferListAdapter;
@@ -25,6 +25,7 @@ public class OfferListActivity extends AppCompatActivity {
     StaggeredGridLayoutManager mStaggeredGridLayoutManager;
     OfferListAdapter mAdapter;
     ImageView mCategoryImageView;
+    ProgressBar mProgressbar;
 
     Toolbar toolbar;
 
@@ -49,12 +50,16 @@ public class OfferListActivity extends AppCompatActivity {
         mCategoryImageView = (ImageView) findViewById(R.id.categoryImageView);
         setCategoryImage(position);
 
+        mProgressbar = (ProgressBar) findViewById(R.id.offerListProgressBar);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.offerListRecyclerView);
         mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         mStaggeredGridLayoutManager.setSpanCount(1);
         mRecyclerView.setLayoutManager(mStaggeredGridLayoutManager);
         mAdapter = new OfferListAdapter(this, position);
         mRecyclerView.setAdapter(mAdapter);
+
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
