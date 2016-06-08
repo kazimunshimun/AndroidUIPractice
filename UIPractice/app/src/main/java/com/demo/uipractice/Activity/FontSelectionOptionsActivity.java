@@ -46,6 +46,9 @@ public class FontSelectionOptionsActivity extends AppCompatActivity {
         UIMenu offerDetailMenu2 = new UIMenu("Athene", "Athene on Offer detail", android.R.drawable.ic_menu_compass);
         menuList.add(offerDetailMenu2);
 
+        UIMenu offerDetailMenu30 = new UIMenu("Century Gothic", "Century Gothic on Offer detail", android.R.drawable.ic_menu_compass);
+        menuList.add(offerDetailMenu30);
+
         UIMenu offerDetailMenu3 = new UIMenu("Corbert Regular", "Corbert Regular on Offer detail", android.R.drawable.ic_menu_compass);
         menuList.add(offerDetailMenu3);
 

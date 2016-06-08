@@ -96,55 +96,58 @@ public class SelectedOfferDetailActivity extends AppCompatActivity {
                 fontAssetName = "athene.otf";
                 break;
             case 2:
-                fontAssetName = "corbert_regular.otf";
+                fontAssetName = "century_gothic.ttf";
                 break;
             case 3:
-                fontAssetName = "fabrica.otf";
+                fontAssetName = "corbert_regular.otf";
                 break;
             case 4:
-                fontAssetName = "fins_regular.otf";
+                fontAssetName = "fabrica.otf";
                 break;
             case 5:
-                fontAssetName = "gravity_book.otf";
+                fontAssetName = "fins_regular.otf";
                 break;
             case 6:
-                fontAssetName = "gravity_light.otf";
+                fontAssetName = "gravity_book.otf";
                 break;
             case 7:
-                fontAssetName = "gravity_regular.otf";
+                fontAssetName = "gravity_light.otf";
                 break;
             case 8:
-                fontAssetName = "hanken_book.ttf";
+                fontAssetName = "gravity_regular.otf";
                 break;
             case 9:
-                fontAssetName = "hanken_light.ttf";
+                fontAssetName = "hanken_book.ttf";
                 break;
             case 10:
-                fontAssetName = "leto_defect.ttf";
+                fontAssetName = "hanken_light.ttf";
                 break;
             case 11:
-                fontAssetName = "mensch_bold.ttf";
+                fontAssetName = "leto_defect.ttf";
                 break;
             case 12:
-                fontAssetName = "metrisch_book.otf";
+                fontAssetName = "mensch_bold.ttf";
                 break;
             case 13:
-                fontAssetName = "pier_regular.otf";
+                fontAssetName = "metrisch_book.otf";
                 break;
             case 14:
-                fontAssetName = "quark_light.otf";
+                fontAssetName = "pier_regular.otf";
                 break;
             case 15:
-                fontAssetName = "roboto_light.ttf";
+                fontAssetName = "quark_light.otf";
                 break;
             case 16:
-                fontAssetName = "roboto_medium.ttf";
+                fontAssetName = "roboto_light.ttf";
                 break;
             case 17:
+                fontAssetName = "roboto_medium.ttf";
+                break;
+            case 18:
                 fontAssetName = "roboto_regular.ttf";
                 break;
 
-            case 18:
+            case 19:
                 fontAssetName = "trebuchet_ms.ttf";
                 break;
 
