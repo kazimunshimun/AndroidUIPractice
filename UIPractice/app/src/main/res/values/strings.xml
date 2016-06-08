@@ -97,4 +97,7 @@
     </string>
     <string name="title_activity_offer_detail_option2">OfferDetailOption2Activity</string>
     <string name="title_activity_selected_offer_detail"></string>
+    <string name="title_activity_glass">Glass</string>
+    <string name="title_activity_blur">BlurActivity</string>
+    <string name="title_activity_blur_effect">BlurEffectActivity</string>
 </resources>

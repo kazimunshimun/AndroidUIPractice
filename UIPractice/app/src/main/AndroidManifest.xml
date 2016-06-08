@@ -72,12 +72,25 @@
         <activity
             android:name=".Activity.SelectedOfferDetailActivity"
             android:label="@string/title_activity_selected_offer_detail"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".Activity.FontSelectionOptionsActivity">
+            android:parentActivityName=".Activity.FontSelectionOptionsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.demo.uipractice.Activity.FontSelectionOptionsActivity" />
         </activity>
+        <activity
+            android:name=".Activity.GlassActivity"
+            android:label="@string/title_activity_glass"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.BlurActivity"
+            android:label="@string/title_activity_blur"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.GlassEffectSelectionActivity" />
+        <activity
+            android:name=".Activity.BlurEffectActivity"
+            android:label="@string/title_activity_blur_effect"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
         UIMenu fontSelectionMenu = new UIMenu("Font Selection", "Font selection options", android.R.drawable.ic_menu_info_details);
         menuList.add(fontSelectionMenu);
 
+        UIMenu glassViewMenu = new UIMenu("Glass Effect", "Glass view selection test", android.R.drawable.ic_menu_info_details);
+        menuList.add(glassViewMenu);
+
         mAdapter.notifyDataSetChanged();
     }
 }
