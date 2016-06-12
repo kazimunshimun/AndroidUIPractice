@@ -15,6 +15,7 @@ import com.demo.uipractice.Activity.FontSelectionOptionsActivity;
 import com.demo.uipractice.Activity.GlassEffectSelectionActivity;
 import com.demo.uipractice.Activity.HomeActivity;
 import com.demo.uipractice.Activity.HomeWithImageFlipperActivity;
+import com.demo.uipractice.Activity.HomeWithImageViewPagerActivity;
 import com.demo.uipractice.Activity.NavigationUIActivity;
 import com.demo.uipractice.Activity.OfferDetailOptionsActivity;
 import com.demo.uipractice.Models.UIMenu;
@@ -97,6 +98,10 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
                     case 7:
                         Intent homeWithFlipperIntent = new Intent(mContext, HomeWithImageFlipperActivity.class);
                         mContext.startActivity(homeWithFlipperIntent);
+                        break;
+                    case 8:
+                        Intent homeWithViewPagerIntent = new Intent(mContext, HomeWithImageViewPagerActivity.class);
+                        mContext.startActivity(homeWithViewPagerIntent);
                         break;
                     default:
                         break;

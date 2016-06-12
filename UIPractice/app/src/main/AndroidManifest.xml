@@ -94,6 +94,10 @@
         <activity
             android:name=".Activity.HomeWithImageFlipperActivity"
             android:label="@string/title_activity_home_with_image_flipper"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.HomeWithImageViewPagerActivity"
+            android:label="@string/title_activity_home_with_image_view_pager"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
