@@ -100,4 +100,5 @@
     <string name="title_activity_glass">Glass</string>
     <string name="title_activity_blur">BlurActivity</string>
     <string name="title_activity_blur_effect">BlurEffectActivity</string>
+    <string name="title_activity_home_with_image_flipper">Home</string>
 </resources>

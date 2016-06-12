@@ -1,8 +1,5 @@
 package com.demo.uipractice.Activity;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -18,7 +15,6 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.demo.uipractice.Fragments.AboutFragment;
-import com.demo.uipractice.Fragments.CategoryFragment;
 import com.demo.uipractice.Fragments.FollowedFragment;
 import com.demo.uipractice.Fragments.PostOfferFragment;
 import com.demo.uipractice.Fragments.TabFragment;
@@ -27,7 +23,7 @@ import com.demo.uipractice.Services.Utils;
 
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, CategoryFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     FragmentManager fragmentManager;
     FrameLayout frameLayout;
@@ -158,8 +154,4 @@ public class HomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
 }

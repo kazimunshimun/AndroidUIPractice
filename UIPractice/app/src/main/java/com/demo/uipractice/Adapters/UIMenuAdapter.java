@@ -14,6 +14,7 @@ import com.demo.uipractice.Activity.CircularProgressBarActivity;
 import com.demo.uipractice.Activity.FontSelectionOptionsActivity;
 import com.demo.uipractice.Activity.GlassEffectSelectionActivity;
 import com.demo.uipractice.Activity.HomeActivity;
+import com.demo.uipractice.Activity.HomeWithImageFlipperActivity;
 import com.demo.uipractice.Activity.NavigationUIActivity;
 import com.demo.uipractice.Activity.OfferDetailOptionsActivity;
 import com.demo.uipractice.Models.UIMenu;
@@ -92,6 +93,10 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
                     case 6:
                         Intent glassViewIntent = new Intent(mContext, GlassEffectSelectionActivity.class);
                         mContext.startActivity(glassViewIntent);
+                        break;
+                    case 7:
+                        Intent homeWithFlipperIntent = new Intent(mContext, HomeWithImageFlipperActivity.class);
+                        mContext.startActivity(homeWithFlipperIntent);
                         break;
                     default:
                         break;

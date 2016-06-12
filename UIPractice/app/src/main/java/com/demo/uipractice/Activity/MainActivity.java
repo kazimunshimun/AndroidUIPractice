@@ -62,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
         UIMenu glassViewMenu = new UIMenu("Glass Effect", "Glass view selection test", android.R.drawable.ic_menu_info_details);
         menuList.add(glassViewMenu);
 
+        UIMenu homeWithImageFlipperViewMenu = new UIMenu("Home with flipper", "Home view with image flipper and navigation drawer", android.R.drawable.ic_menu_info_details);
+        menuList.add(homeWithImageFlipperViewMenu);
+
         mAdapter.notifyDataSetChanged();
     }
 }
