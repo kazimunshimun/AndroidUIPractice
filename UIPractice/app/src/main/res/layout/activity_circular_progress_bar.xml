@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -15,7 +16,6 @@
         android:layout_height="40dp"
         card_view:cardCornerRadius="20dp"
         card_view:cardElevation="2dp"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
         <ProgressBar
@@ -26,6 +26,33 @@
 
     </android.support.v7.widget.CardView>
 
+    <com.demo.uipractice.Views.AVLoadingIndicatorView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/view2"
+        android:layout_below="@+id/categoryCard"
+        android:layout_centerHorizontal="true"
+        app:indicator="BallClipRotateMultiple"
+        app:indicator_color="@color/colorPrimary"/>
+
+    <com.demo.uipractice.Views.AVLoadingIndicatorView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/view3"
+        app:indicator="BallScaleMultiple"
+        app:indicator_color="@color/colorPrimary"
+        android:layout_below="@+id/view2"
+        android:layout_alignLeft="@+id/view2"
+        android:layout_alignStart="@+id/view2" />
+
+    <com.demo.uipractice.Views.AVLoadingIndicatorView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view4"
+        android:layout_below="@+id/view3"
+        android:layout_centerHorizontal="true"
+        app:indicator="BallScale"
+        app:indicator_color="@color/colorPrimary"/>
 
 
 </RelativeLayout>
