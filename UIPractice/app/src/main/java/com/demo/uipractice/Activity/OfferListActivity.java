@@ -2,14 +2,21 @@ package com.demo.uipractice.Activity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -33,7 +40,19 @@ public class OfferListActivity extends AppCompatActivity {
     RelativeLayout contentRoot;
     SwipeRefreshLayout mSwipeRefreshView;
 
-    private int drawingStartLocation;
+   // private int drawingStartLocation;
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public static void launch(Activity activity, View heroView, int position) {
+        Intent intent = getLaunchIntent(activity, position);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    activity, heroView, heroView.getTransitionName());
+            ActivityCompat.startActivity(activity, intent, options.toBundle());
+        } else {
+            activity.startActivity(intent);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +66,7 @@ public class OfferListActivity extends AppCompatActivity {
 
         Intent offerListIntent = getIntent();
         int position = offerListIntent.getIntExtra("postion", 0);
-        drawingStartLocation = offerListIntent.getIntExtra("ARG_DRAWING_START_LOCATION", 0);
+     //   drawingStartLocation = offerListIntent.getIntExtra("ARG_DRAWING_START_LOCATION", 0);
 
         mCategoryImageView = (ImageView) findViewById(R.id.categoryImageView);
         setCategoryImage(position);
@@ -66,13 +85,13 @@ public class OfferListActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        startIntroAnimation();
+       // startIntroAnimation();
     }
 
     private void startIntroAnimation() {
      //   ViewCompat.setElevation(toolbar, 0);
         contentRoot.setScaleY(0.1f);
-        contentRoot.setPivotY(drawingStartLocation);
+     //   contentRoot.setPivotY(drawingStartLocation);
      //   llAddComment.setTranslationY(200);
 
         contentRoot.animate()
@@ -134,6 +153,13 @@ public class OfferListActivity extends AppCompatActivity {
                 imageResource = R.drawable.cat_software;
         }
         mCategoryImageView.setImageResource(imageResource);
+    }
+
+    public static Intent getLaunchIntent(Context context, int position) {
+        Intent intent = new Intent(context, OfferListActivity.class);
+      //  intent.putExtra(EXTRA_ATTRACTION, attraction);
+        intent.putExtra("postion", position);
+        return intent;
     }
 
 }

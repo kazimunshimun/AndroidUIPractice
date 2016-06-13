@@ -1,5 +1,6 @@
 package com.demo.uipractice.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -23,14 +24,16 @@ import com.demo.uipractice.R;
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
     Context mContext;
+    Activity mActivity;
 
-    public CategoryAdapter(Context context){
+    public CategoryAdapter(Context context, Activity activity){
         this.mContext = context;
+        this.mActivity = activity;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_category, parent, false);
+        final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_category, parent, false);
         ViewHolder viewHolder = new ViewHolder(view, new ViewHolder.CategoryItemClick() {
             @Override
             public void onCard(View v, int position) {
@@ -47,7 +50,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
               //  ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext, imagePair);
               //  ActivityCompat.startActivity((Activity) mContext, offerListIntent, options.toBundle());
-                mContext.startActivity(offerListIntent);
+              //  mContext.startActivity(offerListIntent);
+
+                View heroView = view.findViewById(R.id.categoryImageView);
+                OfferListActivity.launch(mActivity, heroView, position);
             }
         });
         return viewHolder;

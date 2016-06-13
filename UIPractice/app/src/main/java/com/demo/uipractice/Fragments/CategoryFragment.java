@@ -86,7 +86,7 @@ public class CategoryFragment extends Fragment {
         mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         mStaggeredGridLayoutManager.setSpanCount(2);
         mRecyclerView.setLayoutManager(mStaggeredGridLayoutManager);
-        mAdapter = new CategoryAdapter(getActivity());
+        mAdapter = new CategoryAdapter(getActivity(), getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
       //  mRecyclerView.setItemAnimator();
