@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -30,6 +31,7 @@ public class OfferListActivity extends AppCompatActivity {
     Toolbar toolbar;
 
     RelativeLayout contentRoot;
+    SwipeRefreshLayout mSwipeRefreshView;
 
     private int drawingStartLocation;
 
@@ -59,7 +61,8 @@ public class OfferListActivity extends AppCompatActivity {
         mAdapter = new OfferListAdapter(this, position);
         mRecyclerView.setAdapter(mAdapter);
 
-
+        mSwipeRefreshView = (SwipeRefreshLayout) findViewById(R.id.refreshLayout);
+        mSwipeRefreshView.setColorSchemeResources(R.color.colorPrimary);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

@@ -3,6 +3,7 @@ package com.demo.uipractice.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ public class FeaturedOfferFragment extends Fragment {
     RecyclerView mRecyclerView;
     StaggeredGridLayoutManager mStaggeredGridLayoutManager;
     FeaturedOfferAdapter mAdapter;
+    SwipeRefreshLayout mSwipeRefreshView;
 
     int offerPosition = 0;
 
@@ -62,6 +64,8 @@ public class FeaturedOfferFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View containerView = inflater.inflate(R.layout.fragment_featured_offer, container, false);
+        mSwipeRefreshView = (SwipeRefreshLayout) containerView.findViewById(R.id.refreshLayout);
+        mSwipeRefreshView.setColorSchemeResources(R.color.colorPrimary);
         mRecyclerView = (RecyclerView) containerView.findViewById(R.id.offerListRecyclerView);
         mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         mStaggeredGridLayoutManager.setSpanCount(1);

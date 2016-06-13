@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -41,6 +42,8 @@ public class CategoryFragment extends Fragment {
 
     CategoryAdapter mAdapter;
 
+    SwipeRefreshLayout mSwipeRefreshView;
+
     public CategoryFragment() {
         // Required empty public constructor
     }
@@ -77,6 +80,8 @@ public class CategoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View containerView = inflater.inflate(R.layout.fragment_category, container, false);
+        mSwipeRefreshView = (SwipeRefreshLayout) containerView.findViewById(R.id.refreshLayout);
+        mSwipeRefreshView.setColorSchemeResources(R.color.colorPrimary);
         mRecyclerView = (RecyclerView) containerView.findViewById(R.id.categoryRecyclerView);
         mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         mStaggeredGridLayoutManager.setSpanCount(2);
