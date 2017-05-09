@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -9,8 +10,7 @@
     android:paddingRight="4dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.demo.uipractice.Activity.OfferListActivity"
-    tools:showIn="@layout/activity_offer_list"
-    android:id="@+id/contentRoot">
+    tools:showIn="@layout/activity_offer_list">
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/categoryCard"
@@ -18,20 +18,20 @@
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="4dp"
         card_view:cardElevation="2dp">
-    <ImageView
-        android:id="@+id/categoryImageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/cat_beauty"
-        android:transitionName="image"/>
+
+        <ImageView
+            android:id="@+id/categoryImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/cat_beauty"
+            android:transitionName="image" />
     </android.support.v7.widget.CardView>
 
     <ProgressBar
         android:id="@+id/offerListProgressBar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/refreshLayout"
@@ -41,13 +41,12 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/categoryCard">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/offerListRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/offerListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.RecyclerView>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

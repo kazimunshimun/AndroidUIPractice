@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         UIMenu homeWithViewPagerViewMenu = new UIMenu("Home with view pager", "Home view with image view pager and navigation drawer", android.R.drawable.ic_menu_info_details);
         menuList.add(homeWithViewPagerViewMenu);
 
+        UIMenu homeWithScrollViewMenu = new UIMenu("Home in ScrollView", "Home view in ScrollView and navigation drawer", android.R.drawable.ic_menu_info_details);
+        menuList.add(homeWithScrollViewMenu);
+
         mAdapter.notifyDataSetChanged();
     }
 }

@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.demo.uipractice.R;
-import com.squareup.picasso.Picasso;
 
 /**
  * Created by Anik TigerIT on 6/12/16.
@@ -20,6 +19,7 @@ public class ImagePagerAdapter extends PagerAdapter {
     Context mContext;
     LayoutInflater mLayoutInflater;
     String[] mImageURL;
+    int[] mImageResource = {R.drawable.auto_tata, R.drawable.auto_tvs, R.drawable.book_rokomari, R.drawable.elec_haier, R.drawable.cat_art};
 
     public ImagePagerAdapter(Context context, String[] imageURL) {
         mContext = context;
@@ -44,14 +44,17 @@ public class ImagePagerAdapter extends PagerAdapter {
         ImageView imageView = (ImageView) itemView.findViewById(R.id.item_imageView);
       //  imageView.setImageResource(mResources[position]);
         Log.d("debuglogkey", mImageURL[position]);
+        /*
         Picasso.with(mContext)
                 .load(mImageURL[position])
                 .placeholder(R.drawable.ic_category)
                 .fit()
-                // .resize(60, 60)
-                //  .centerCrop()
-                //  .transform(new CircleTransformation())
                 .into(imageView);
+        */
+
+        imageView.setImageResource(mImageResource[position]);
+
+       // Picasso.with(mContext).load(mImageURL[position]).into(imageView);
         container.addView(itemView);
 
         return itemView;

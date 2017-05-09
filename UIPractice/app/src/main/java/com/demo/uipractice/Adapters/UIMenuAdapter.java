@@ -14,6 +14,7 @@ import com.demo.uipractice.Activity.CircularProgressBarActivity;
 import com.demo.uipractice.Activity.FontSelectionOptionsActivity;
 import com.demo.uipractice.Activity.GlassEffectSelectionActivity;
 import com.demo.uipractice.Activity.HomeActivity;
+import com.demo.uipractice.Activity.HomeInScrollViewActivity;
 import com.demo.uipractice.Activity.HomeWithImageFlipperActivity;
 import com.demo.uipractice.Activity.HomeWithImageViewPagerActivity;
 import com.demo.uipractice.Activity.NavigationUIActivity;
@@ -102,6 +103,10 @@ public class UIMenuAdapter extends RecyclerView.Adapter<UIMenuAdapter.MenuViewHo
                     case 8:
                         Intent homeWithViewPagerIntent = new Intent(mContext, HomeWithImageViewPagerActivity.class);
                         mContext.startActivity(homeWithViewPagerIntent);
+                        break;
+                    case 9:
+                        Intent homeInScrollViewIntent = new Intent(mContext, HomeInScrollViewActivity.class);
+                        mContext.startActivity(homeInScrollViewIntent);
                         break;
                     default:
                         break;
